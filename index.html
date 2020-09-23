@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -11,9 +12,7 @@
     <header class="main-header">
       <div class="main-header-top">
 
-        <div class="main-header-logo">
-          <a class="main-header-logo-link" href="">Техномарт</a>
-        </div>
+          <a class="main-header-logo" href="">Техномарт</a>
 
         <div class="search">
           <!--Форма для поиска-->
@@ -21,9 +20,7 @@
 
         <a class="bookmarks" href="">Закладки: 0</a>
         <a class="basket" href="">Корзина: 0</a>
-        <div class="order">
-          <a class="order-link" href="">Оформить заказ</a>
-        </div>
+        <a class="order" href="">Оформить заказ</a>
       </div>
 
       <div class="header-bottom">
@@ -32,12 +29,12 @@
         <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
 
-        <div class="white-button">
-          <a class="white-button login-link" href="">Войти</a>
-        </div>
-        <div class="white-button">
-          <a class="white-button registration-link" href="">Регистрация</a>
-        </div>
+          <a class="test" href=" "><div class=""></div></a>
+
+          <a class="white-button" href="">Войти</a>
+
+          <a class="white-button" href="">Регистрация</a>
+
 
         <nav class="main-nav">
           <ul class="site-nav">
@@ -57,8 +54,8 @@
     <main class="container">
 
       <div class="offers">
-        <div class="offers-1">
-          <ul class="offers-1-list">
+        <div class="offers-wrapper-top">
+          <ul class="offers-list">
             <li class="offers-item">
                 <h3 class="offers-item-title">Материалы</h3>
                 <a class="offers-item-link" href="">На любой вкус</a>
@@ -74,16 +71,16 @@
           </ul>
         </div>
 
-        <div class="offers-2">
+        <div class="offers-wrapper-right">
 
-          <div class="slide">
-            <div class="slide-page-1">
+          <div class="slider">
+            <div class="slider-item">
               <div class="slider-top">
                 <h2 class="slider-title">Перфораторы</h2>
                 <p class="slider-text">Настоящие мужские игрушки</p>
               </div>
             </div>
-            <div class="slide-page-2">
+            <div class="slider-item">
               <div class="slider-top">
                 <h2 class="slider-title">Дрели</h2>
                 <p class="slider-text">Соседям на радость</p>
@@ -93,15 +90,13 @@
             <button class="slider-button-left"><img src="" alt="Left button"></button>
             <button class="slider-button-right"><img src="" alt="Right button"></button>
 
-            <div class="red-button">
-              <a class="red-button-link" href="">Открыть каталог</a>
-            </div>
+              <a class="red-button" href="">Открыть каталог</a>
 
             <input type="radio" name="slider-radio" value="1" checked>
             <input type="radio" name="slider-radio" value="2">
           </div>
 
-          <ul class="offers-2-list">
+          <ul class="offers-list">
             <li class="offers-item">
                 <h3 class="offers-item-title">Скидки 50%</h3>
                 <a class="offers-item-link" href="">На 350 товаров</a>
@@ -120,36 +115,32 @@
 
         <div class="popular-header">
           <h2 class="popular-title">Популярные товары:</h2>
-            <div class="red-button">
-              <a class="red-button-link" href="">Все популярные товары</a>
-            </div>
+              <a class="red-button" href="">Все популярные товары</a>
         </div>
 
-        <ul class="popular-list">
-          <li class="popular-item">
+        <ul class="popular-products-list">
+          <li class="popular-products-item">
               <h3 class="popular-products-title">Перфоратор BOSCH BFG 9000</h3>
               <span class="popular-products-last-price">32500</span>
               <span class="popular-products-price">25500 Р.</span>
           </li>
 
-          <li class="popular-item">
+          <li class="popular-products-item">
               <h3 class="popular-products-title">Перфоратор BOSCH BFG 3000</h3>
               <span class="popular-products-last-price">22500</span>
               <span class="popular-products-price">15500 Р.</span>
           </li>
 
-          <li class="popular-item">
+          <li class="popular-products-item">
               <h3 class="popular-products-title">Перфоратор BOSCH BFG 6000</h3>
               <span class="popular-products-last-price">30500</span>
               <span class="popular-products-price">25500 Р.</span>
           </li>
 
-          <li class="popular-item">
+          <li class="popular-products-item">
               <h3 class="popular-products-title">Перфоратор BOSCH BFG 2000</h3>
               <span class="popular-products-last-price"></span>
-              <div class="popular-products-price">
               <span class="popular-products-price">12500 Р.</span>
-              </div>
           </li>
 
         </ul>
@@ -160,20 +151,18 @@
 
         <div class="popular-header">
           <h2 class="popular-title">Популярные производители:</h2>
-            <div class="red-button">
-              <a class="red-button-link" href="">Все производители</a>
-            </div>
+              <a class="red-button" href="">Все производители</a>
         </div>
 
-        <ul class="popular-list">
-          <li class="popular-item"><a href=""><img src="" alt="Bosch"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Makita"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Dewalt"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Интерскол"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Hitachi"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Lg"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Aeg"></a></li>
-          <li class="popular-item"><a href=""><img src="" alt="Metabo"></a></li>
+        <ul class="popular-firms-list">
+          <li><a class="popular-firms-item" href=""><img src="" alt="Bosch"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Makita"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Dewalt"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Интерскол"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Hitachi"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Lg"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Aeg"></a></li>
+          <li><a class="popular-firms-item" href=""><img src="" alt="Metabo"></a></li>
         </ul>
       </section>
 
@@ -188,13 +177,29 @@
           <li class="services-button"><button>Кредит</button></li>
         </ul>
 
-        <div class="services-button-page">
-          <h2 class="services-button-page-title">Доставка</h2>
-          <p class="services-button-page-text">Мы с удовольствием доставим ваш товар прямо<br>
+        <div class="services-button-selected">
+          <h2 class="services-button-selected-title">Доставка</h2>
+          <p class="services-button-selected-text">Мы с удовольствием доставим ваш товар прямо<br>
             к вашему подъезду совершенно бесплатно!<br>
             Ведь мы неплохо заработаем,<br>
             поднимая его на ваш этаж!</p>
         </div>
+
+        <div class="services-button-selected">
+          <h2 class="services-button-selected-title">Гарантия</h2>
+          <p class="services-button-selected-text">Если купленный у нас товар поломается или заискрит, 
+          а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
+          Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+        </div>
+
+        <div class="services-button-selected">
+          <h2 class="services-button-selected-title">Кредит</h2>
+          <p class="services-button-selected-text">
+          Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+
+          <a class="red-button" href="">Отправить заявку</a>
+        </div>
+
       </section>
 
 
@@ -214,9 +219,7 @@
           <li class="about-list-item">ЖелДорЭкспедиция</li>
         </ul>
 
-        <div class="red-button about-button">
-          <a class="red-button-link" href="">Подробнее о компании</a>
-        </div>
+          <a class="red-button about-button" href="">Подробнее о компании</a>
 
       </div>
 
@@ -227,9 +230,7 @@
 
       <a class="contacts-map" href=""><img src="" alt="Как нас найти"></a>
 
-      <div class="red-button contacts-button">
-        <a class="red-button-link" href="">Заблудились? Напишите нам!</a>
-      </div>
+        <a class="red-button contacts-button" href="">Заблудились? Напишите нам!</a>
 
       </div>
 
@@ -237,9 +238,7 @@
 
     <footer class="main-footer">
 
-      <div class="main-footer-logo">
-        <a class="main-footer-logo-link">Техномарт</a>
-      </div>
+        <a class="main-footer-logo" href="">Техномарт</a>
 
       <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>

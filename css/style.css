@@ -1,14 +1,35 @@
+
 /*   Variables   */
 
 :root{
 	--basic-red: #EE3643;
+	--basic-green: #63A63E;
+	--basic-grey: #3D546F;
+	--basic-greylight: #C5C5C5;
+	--basic-background: #F1F5F7;
+	--white: #FFFFFF;
+	--faded-white: rgba(255, 255, 255, 0.5);
+	--special-yellow: #FFBF47;
+	--special-blue: #3BBCE3;
+	--special-lilac: #DC91D8;
+	--special-greenlight: #8ED78F;
+	--special-yellowlight: #FFD180;
+	--special-yellow-lighten: #FFC047;
+	--success: #5FBB2D;
+	--warning: #FFBF47;
+	--error: #BA2732;
 }
 
 /*   Fonts   */
 
-@font-face {
+@font-face{
 	font-family: "Cuprum";
-	src: url(../fonts/cuprum.woff2);	
+	src: local("Cuprum Regular"),
+	local("Cuprum-Regular"),
+	url(../fonts/cuprum.woff),
+	format(woff),
+	url(../fonts/cuprum.woff2),
+	format(woff2);
 
 	font-style: normal;
 	font-weight: normal;
@@ -17,54 +38,53 @@
 /*   Buttons   */
 
 .red-button{
-	width: 192px;
-	height: 38px;
 	background-color: var(--basic-red);
 	text-align: center;
-}
-
-.red-button-link{
 	font-size: 14px;
 	line-height: 18px;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: #FFF;
+	color: var(--white);
 }
 
+.red-button:hover{
+	background: #CA2C37;
+}
+
+.red-button:focus{
+	background: var(--error);
+}
 
 .white-button{
-	width: 121px;
-	height: 45px;
-	background-color: #FFF;
+	background-color: var(--white);
 	text-align: center;
-}
 
-.white-button .login-link{
 	font-size: 21px;
 	line-height: 21px;
 	text-decoration: none;
 	color: #000;
 }
 
-.white-button .registration-link{
-	font-size: 21px;
-	line-height: 21px;
-	text-decoration: none;
-	color: #000;
+.white-button:hover{
+	color: var(--basic-red);
+}
+
+.white-button:focus{
+	color: var(--basic-greylight)
 }
 
 /*   Global   */
 
 .page-body{
 	font-family: "cuprum", "Arial", sans-serif;
-	background-color: #FFF;
+	background-color: var(--white);
 }
 
 /*   Header   */
 
 .main-header{
-	background-color: #F1F5F7;
+	background-color: var(--basic-background);
 }
 
 .main-header-top{
@@ -72,21 +92,23 @@
 }
 
 .main-header-logo{
+	padding: 20px 45px;
 	background: var(--basic-red);
 	width: 220px;
 	height: 47px;
 	text-align: center;
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-}
-
-.main-header-logo-link{
 	text-decoration: none;
 	font-size: 24px;
 	font-weight: normal;
 	font-style: normal;
 	line-height: 26px;
-	color: #FFF;
+	color: var(--white);
 	text-transform: uppercase;
+}
+
+.main-header-logo:focus{
+	background: var(--error);
 }
 
 .search{
@@ -97,29 +119,42 @@
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
-	color: #FFF;
+	color: var(--white);
+}
+
+.bookmarks:focus{
+	color: var(--faded-white);
 }
 
 .basket{
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
-	color: #FFF;
+	color: var(--white);
+}
+
+.basket:focus{
+	color: var(--faded-white);
 }
 
 .order{
-	background: #63A63E;
-	width: 150px;
-	height: 42px;
+	background: var(--basic-green);
 	text-align: center;
-}
 
-.order-link{
 	font-size: 18px;
 	line-height: 24px;
 	text-transform: none;
 	text-decoration: none;
-	color: #FFF;
+	color: var(--white);
+}
+
+.order:hover{
+	background: var(--success);
+}
+
+.order:focus{
+	background: var(--basic-green);
+	color: var(--faded-white);
 }
 
 .main-title{
@@ -158,20 +193,25 @@
 	list-style: none;
 }
 
-.nav-link {
+.nav-link{
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
-	color: #fff;
+	color: var(--white);
+}
+
+.nav-link:hover{
+	background: #293449;
+}
+
+.nav-link:focus{
+	background: #1D2739;
+	color: var(--faded-white);
 }
 
 /*   Main   */
 
-.offers-1-list{
-	list-style: none;
-}
-
-.offers-2-list{
+.offers-list{
 	list-style: none;
 }
 
@@ -184,7 +224,7 @@
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 30px;
-	color: #FFF;
+	color: var(--white);
 }
 
 .offers-item-link{
@@ -192,31 +232,39 @@
 	text-decoration: none;
 	font-size: 14px;
 	line-height: 18px;
-	color: #FFF;
+	color: var(--white);
 	text-transform: uppercase;
 }
 
-.offers-1 .offers-item:nth-child(1){
-	background-color:#FFBF47;
+.offers-item-link:hover{
+	background: rgba(197, 197, 197, 0.3);
 }
 
-.offers-1 .offers-item:nth-child(2){
-	background-color: #3BBCE3;
+.offers-item-link:focus{
+	background: rgba(169, 169, 169, 0.3);
 }
 
-.offers-1 .offers-item:nth-child(3){
-	background-color: #DC91D8;
+.offers-wrapper-top .offers-item:nth-of-type(1){
+	background-color: var(--special-yellow);
 }
 
-.offers-2 .offers-item:nth-child(1){
-	background-color: #8ED78F;
+.offers-wrapper-top .offers-item:nth-of-type(2){
+	background-color: var(--special-blue);
 }
 
-.offers-2 .offers-item:nth-child(2){
-	background-color: #FFC047;
+.offers-wrapper-top .offers-item:nth-of-type(3){
+	background-color: var(--special-lilac);
 }
 
-.slide{
+.offers-wrapper-right .offers-item:nth-child(1){
+	background-color: var(--special-greenlight);
+}
+
+.offers-wrapper-right .offers-item:nth-child(2){
+	background-color: var(--special-yellow-lighten);
+}
+
+.slider{
 	width: 620px;
 	height: 266px;
 }
@@ -237,9 +285,32 @@
 	line-height: 24px;
 }
 
-
-.popular-list{
+.popular-products-list{
 	list-style: none;
+}
+
+.popular-firms-list{
+	list-style: none;
+}
+
+.popular-products-item{
+	background: var(--white);
+	border: 1px solid #EAEAEA;
+}
+
+.popular-firms-item{
+	background: var(--white);
+	border: 1px solid #EAEAEA;
+	margin-top: 10px;
+}
+
+.popular-firms-item:hover{
+	filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.popular-firms-item:focus{
+	opacity: 0.5;
+	filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
 .popular-header{
@@ -253,19 +324,13 @@
 	color: #32425C;
 }
 
-.popular-item{
-	background: #FFFFFF;
-	border: 1px solid #EAEAEA;
-}
-
 .popular-products-last-price{
 	color: #A9A9A9;
 	text-decoration: line-through;
 }
 
-
 .services{
-	background: #F1F5F7;
+	background: var(--basic-background);
 	width: 1200px;
 	height: 522px;
 }
@@ -279,23 +344,30 @@
 .services-text{
 	font-size: 13px;
 	line-height: 24px;
-	letter-spacing: 0px;
 }
 
 .services-buttons-list{
 	list-style: none;
 }
 
-.services-button-page-title{
+.services-button:hover{
+	background:#293449;
+}
+
+.services-button-selected-title{
 	font-size: 30px;
 	line-height: 30px;
+	color: #32425C;
+	font-weight: 400;
+	text-transform: uppercase;	
 }
 
-.services-button-page-text{
+.services-button-selected-text{
+	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 24px;
+	font-weight: 400;
 }
-
 
 .about-title{
 	font-size: 30px;
@@ -317,7 +389,6 @@
 .about-button{
 	width: 220px;
 }
-
 
 .contacts-title{
 	font-size: 30px;
@@ -341,17 +412,13 @@
 }
 
 .main-footer-logo{
-	width: 220px;
-	height: 68px;
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 	text-align: center;
-}
-
-.main-footer-logo-link{
-	color: #FFF;
+	color: var(--white);
 	font-size: 32px;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .footer-address{
@@ -373,7 +440,16 @@
 }
 
 .footer-nav-up-link{
-	color: #F1F5F7;
+	color: var(--basic-background);
+	text-decoration: none;
+}
+
+.footer-nav-up-link:hover{
+	text-decoration: underline;
+}
+
+.footer-nav-up-link:focus{
+	opacity: 0.5;
 	text-decoration: none;
 }
 
@@ -386,6 +462,15 @@
 	text-decoration: none;
 }
 
+.footer-nav-down-link:hover{
+	text-decoration: underline;
+}
+
+.footer-nav-down-link:focus{
+	opacity: 0.5;
+	text-decoration: none;
+}
+
 .main-footer-down{
 	background: #293449;
 }
@@ -393,7 +478,7 @@
 .copyright{
 	font-size: 16px;
 	line-height: 18px;
-	color: #FFF;
+	color: var(--white);
 }
 
 .socials-list{
@@ -403,25 +488,43 @@
 .feedback{
 	font-size: 16px;
 	line-height: 18px;
-	color: #FFF;
+	color: var(--white);
 }
 
 .feedback-link{
 	font-size: 16px;
 	line-height: 18px;
-	color: #FFD180;
+	color: var(--special-yellowlight);
+	text-decoration: none;
+}
+
+.feedback-link:hover{
+	text-decoration: underline;
+}
+
+.feedback-link:focus{
+	opacity: 0.5;
 	text-decoration: none;
 }
 
 .developed{
 	font-size: 16px;
 	line-height: 18px;
-	color: #FFF;
+	color: var(--white);
 }
 
 .developed-link{
 	font-size: 16px;
 	line-height: 18px;
-	color: #FFD180;
+	color: var(--special-yellowlight);
+	text-decoration: none;
+}
+
+.developed-link:hover{
+	text-decoration: underline;
+}
+
+.developed-link:focus{
+	opacity: 0.5;
 	text-decoration: none;
 }
