@@ -679,6 +679,14 @@
 	color: var(--black);
 }
 
+.breadcrumbs-item{
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
 .catalog-title{
 	background-color: var(--basic-background-light);
 	font-weight: normal;
