@@ -33,6 +33,7 @@
 	--special-grey: #A9A9A9;
 	--special-blue-inset: #405069;
 	--special-red-light: #ee3643;
+	--special-red-credit: #FF5357;
 	--success: #5FBB2D;
 	--warning: #FFBF47;
 	--error: #BA2732;
@@ -100,6 +101,17 @@
 
 .red-button{
 	background-color: var(--basic-red);
+	text-align: center;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--white);
+}
+
+.red-button-services{
+	background-color: var(--special-red-credit);
 	text-align: center;
 	font-size: 14px;
 	line-height: 18px;
@@ -254,7 +266,6 @@
 }
 
 .main-nav{
-	width: 940px;
 	background-color: var(--basic-dark-blue);
 	box-shadow: inset 0px -5px 0px var(--basic-dark-blue-darker);
 }
@@ -281,12 +292,14 @@
 
 /*   Main   */
 
-.offers-list{
+.offers-list-top{
 	list-style: none;
+	padding: 0;
 }
 
-.offers-item{
-	width: 300px;
+.offers-list-bottom{
+	list-style: none;
+	padding: 0;
 }
 
 .offers-item-title{
@@ -325,16 +338,12 @@
 	background-color: var(--special-lilac);
 }
 
-.offers-wrapper-right .offers-item:nth-child(1){
+.offers-wrapper-bottom .offers-item:nth-child(1){
 	background-color: var(--special-greenlight);
 }
 
-.offers-wrapper-right .offers-item:nth-child(2){
+.offers-wrapper-bottom .offers-item:nth-child(2){
 	background-color: var(--special-yellow-lighten);
-}
-
-.slider{
-	width: 620px;
 }
 
 .slider-top{
@@ -361,6 +370,7 @@
 
 .popular-firms-list{
 	list-style: none;
+	padding: 0;
 }
 
 .products-item{
@@ -888,12 +898,17 @@
 }
 
 .few-words-text{
-	font-family: PT Sans;
+	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 24px;
 }
 
 /*---Grids---*/
+
+.center{
+	width: 940px;
+	margin: 0 auto;
+}
 
 .page {
 	height: 100%;
@@ -906,23 +921,147 @@
 	align-content: start;
 }
 
-.main-header{
-}
-
 .main-header-top-bar{
-	width: 100vw;
 	background-color: var(--basic-dark-blue-darker);
 }
 
 .main-header-top{
-	width: 940px;
-	margin: 0 auto;
   	display: grid;
 	grid-template-columns: 220px 1fr 150px 150px 150px;
 }
 
-.header-bottom{
-	width: 940px;
-	margin: 0 auto;
-  	display: grid;
+.header-bottom-wrapper{
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: flex-start; 
+}
+
+.header-bottom-center{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.site-nav{
+	display: flex;
+	justify-content: space-around;
+}
+
+.offers-list-top{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.offers-wrapper-bottom{
+	display: grid;
+	grid-template-columns: 620px 1fr;
+	gap: 20px;
+}
+
+.offers-list-bottom{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.popular-products{
+	display: flex;
+	flex-direction: column;
+}
+
+.popular-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.products-list{
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+
+
+.popular-firms{
+	display: flex;
+	flex-direction: column;
+}
+
+.popular-firms-list{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+.popular-firms-item{
+	width: 220px;
+	height: 145px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.services-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.services-bottom-wrapper{
+	display: flex;
+}
+
+.main-bottom-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
+.contacts{
+	display: flex;
+	flex-direction: column;
+}
+
+.main-footer-top-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-nav{
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-nav-up{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.footer-nav-down{
+	display: flex;
+	flex-direction: row;
+}
+
+.main-footer-down-wrapper{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+
+.socials-list{
+	display: flex;
+	gap: 5px;
+}
+
+.main-footer-down-right{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.main-footer-down-text{
+	display: flex;
+	flex-direction: column;
 }
