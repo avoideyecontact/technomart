@@ -892,3 +892,37 @@
 	font-size: 13px;
 	line-height: 24px;
 }
+
+/*---Grids---*/
+
+.page {
+	height: 100%;
+}
+
+.page-body{
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
+}
+
+.main-header{
+}
+
+.main-header-top-bar{
+	width: 100vw;
+	background-color: var(--basic-dark-blue-darker);
+}
+
+.main-header-top{
+	width: 940px;
+	margin: 0 auto;
+  	display: grid;
+	grid-template-columns: 220px 1fr 150px 150px 150px;
+}
+
+.header-bottom{
+	width: 940px;
+	margin: 0 auto;
+  	display: grid;
+}
