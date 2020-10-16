@@ -414,7 +414,6 @@
 
 .services{
 	background: var(--basic-background);
-	width: 1200px;
 }
 
 .services-title{
@@ -785,7 +784,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	border: 1px solid #E5E5E5;
-	background-color: var(--special-one-more-grey);
+	background-color: var(--white);
 }
 
 .filter-top{
@@ -936,7 +935,7 @@
   	align-items: flex-start; 
 }
 
-.header-bottom-center{
+.header-bottom-center-f{
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -1064,4 +1063,68 @@
 .main-footer-down-text{
 	display: flex;
 	flex-direction: column;
+}
+
+/*---Grids_Catalog---*/
+
+.header-bottom-right-personal{
+	display: flex;
+}
+
+.breadcrumbs{
+	display: flex;
+}
+
+.catalog-products{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.catalog-left{
+	width: 220px;
+	display: flex;
+	flex-direction: column;
+}
+
+.catalog-right{
+	width: 700px;
+	box-sizing: border-box;
+}
+
+.filter-price{
+	margin: 0;
+}
+
+.filter-range-fields{
+	display: flex;
+}
+
+.filter-value-field{
+	width: 95px;
+}
+
+.filter-top{
+	display: flex;
+	justify-content: space-between;
+}
+
+.filter-sort-list{
+	display: flex;
+}
+
+.products-list{
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.products-item{
+	padding: 0;
+	width: 220px;
+	box-sizing: border-box;
+}
+
+.page-number-list{
+	display: flex;
 }
