@@ -236,6 +236,10 @@
 	color: var(--faded-white);
 }
 
+.header-bottom-wrapper{
+	padding-top: 46px;
+}
+
 .main-title{
 	width: 197px;
 	font-weight: normal;
@@ -243,6 +247,7 @@
 	font-size: 16px;
 	list-style: 23px;
 	color: var(--basic-red);
+	margin: 0;
 }
 
 .header-phone{
@@ -255,7 +260,7 @@
 
 	background: var(--special-background-light);
 	border: 3px solid var(--white);
-	box-sizing: border-box;
+	margin-bottom: 3px;
 }
 
 .header-address{
@@ -272,6 +277,8 @@
 
 .site-nav{
 	list-style: none;
+	padding: 0;
+	margin: 40px 0 60px 0;
 }
 
 .nav-link{
@@ -292,9 +299,14 @@
 
 /*   Main   */
 
+.offers{
+	padding: 59px 0;
+}
+
 .offers-list-top{
 	list-style: none;
 	padding: 0;
+	margin: 0;
 }
 
 .offers-list-bottom{
@@ -368,6 +380,11 @@
 	list-style: none;
 }
 
+.products-list-popular{
+	list-style: none;
+	padding: 0;
+}
+
 .popular-firms-list{
 	list-style: none;
 	padding: 0;
@@ -416,20 +433,28 @@
 	background: var(--basic-background);
 }
 
+.services-top{
+	padding-top: 64px;
+}
+
 .services-title{
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	margin: 0;
 }
 
 .services-text{
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 24px;
+	margin: 25px 0 70px 0;
 }
 
 .services-buttons-list{
 	list-style: none;
+	padding: 0;
+	margin: 0 0 100px 0;
 }
 
 .services-button{
@@ -466,7 +491,8 @@
 	line-height: 30px;
 	color: var(--basic-dark-blue);
 	font-weight: normal;
-	text-transform: uppercase;	
+	text-transform: uppercase;
+	margin: 0;
 }
 
 .services-button-selected-text{
@@ -474,24 +500,37 @@
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: 400;
+	margin: 30px 0 0 0;
+}
+
+.main-bottom-wrapper{
+	padding: 70px 0;
 }
 
 .about-title{
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	margin: 0 0 24px 0;
 }
 
 .about-text{
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 24px;
+	margin: 0;
+}
+
+.about-list{
+	margin: 1px 0 25px 0;
+	padding-left: 37px;
 }
 
 .about-list-item{
 	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0px;
+	margin-bottom: 12px;
 }
 
 .about-button{
@@ -502,12 +541,18 @@
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	margin: 0 0 24px 0;
 }
 
 .contacts-text{
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 24px;
+	margin: 0 0 32px 0;	
+}
+
+.contacts-map{
+	margin-bottom: 25px;
 }
 
 .contacts-button{
@@ -520,6 +565,10 @@
 	background: var(--basic-dark-blue);
 }
 
+.main-footer-top{
+	padding-bottom: 54px;
+}
+
 .main-footer-logo{
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
@@ -528,13 +577,14 @@
 	font-size: 32px;
 	text-transform: uppercase;
 	text-decoration: none;
+	margin-bottom: 22px;
 }
 
 .footer-address{
 	font-size: 18px;
 	line-height: 24px;
 	color: var(--basic-background);
-
+	margin: 22px 0 0 0;
 }
 
 .footer-phone{
@@ -544,8 +594,17 @@
 	color: var(--basic-background);
 }
 
+.footer-nav{
+	margin-top: 37px;
+}
+
+.footer-nav li{
+	padding-left: 60px;
+}
+
 .footer-nav-up{
 	list-style: none;
+	margin: 0;
 }
 
 .footer-nav-up-link{
@@ -564,6 +623,7 @@
 
 .footer-nav-down{
 	list-style: none;
+	margin: 34px 0 0 0;
 }
 
 .footer-nav-down-link{
@@ -582,16 +642,19 @@
 
 .main-footer-down{
 	background: var(--basic-dark-blue-darker);
+	padding: 35px 0;
 }
 
 .copyright{
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--white);
+	margin: 0;
 }
 
 .socials-list{
 	list-style: none;
+	margin: 0;
 }
 
 .feedback{
@@ -935,7 +998,7 @@
   	align-items: flex-start; 
 }
 
-.header-bottom-center-f{
+.header-bottom-center{
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -966,30 +1029,32 @@
 .popular-products{
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 70px; 
 }
 
 .popular-header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 20px;
 }
 
-.products-list{
+.products-list-popular{
+	margin: 0;
 	display: flex;
 	justify-content: space-between;
-	gap: 20px;
 }
-
-
 
 .popular-firms{
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 70px; 
 }
 
 .popular-firms-list{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	margin: 0;
 	gap: 20px;
 }
 
@@ -999,6 +1064,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	box-sizing: border-box;
+	margin: 0;
 }
 
 .services-wrapper{
