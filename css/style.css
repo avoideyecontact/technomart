@@ -237,7 +237,7 @@
 }
 
 .header-bottom-wrapper{
-	padding-top: 46px;
+	padding: 41px 0 40px 0;
 }
 
 .main-title{
@@ -278,7 +278,7 @@
 .site-nav{
 	list-style: none;
 	padding: 0;
-	margin: 40px 0 60px 0;
+	margin: 0;
 }
 
 .nav-link{
@@ -299,8 +299,12 @@
 
 /*   Main   */
 
+.container{
+	padding: 59px;
+}
+
 .offers{
-	padding: 59px 0;
+	padding-bottom: 59px;
 }
 
 .offers-list-top{
@@ -378,6 +382,8 @@
 
 .products-list{
 	list-style: none;
+	padding: 0;
+	margin: 0 0 48px 0;
 }
 
 .products-list-popular{
@@ -414,6 +420,7 @@
 
 .popular-header{
 	background: var(--special-beige);
+	padding: 30px 0;
 }
 
 .popular-title{
@@ -422,6 +429,7 @@
 	text-transform: uppercase;
 	color: var(--basic-dark-blue);
 	font-weight: normal;
+	margin: 0;
 }
 
 .products-last-price{
@@ -749,6 +757,7 @@
 .breadcrumbs{
 	list-style: none;
 	color: var(--black);
+	padding: 21px 0 20px 0;
 }
 
 .breadcrumbs-item{
@@ -761,9 +770,16 @@
 
 .catalog-title{
 	background-color: var(--basic-background-light);
+	color: var(--basic-dark-blue);
 	font-weight: normal;
+	text-transform: uppercase;
 	font-size: 30px;
 	line-height: 30px;
+	padding: 29px 0 30px 0;
+}
+
+.catalog-products{
+	padding: 20px 0 59px 0;
 }
 
 .filter-filter{
@@ -774,6 +790,8 @@
 	text-transform: uppercase;
 	background-color: var(--special-beige-dull);
 	border-radius: 5px;
+	margin: 0;
+	padding: 10px 0;
 }
 
 .filter-price{
@@ -783,11 +801,13 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	border-radius: 5px;
+	padding: 10px 0;
 }
 
 .filter-range{
 	background-color: var(--special-beige-dull);
 	border-radius: 5px;
+	margin-bottom: 9px;
 }
 
 .filter-value-field{
@@ -811,6 +831,9 @@
 
 .filter-firms-list{
 	list-style: none;
+	margin: 0;
+	padding: 0 0 26px 0;
+	border-bottom: 1px solid var(--special-one-more-grey);
 }
 
 .filter-firms-item{
@@ -827,10 +850,14 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	border-radius: 5px;
+	padding: 18px 0 20px 0;
+	margin: 0;
 }
 
 .filter-powersupply-list{
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .filter-powersupply-item{
@@ -846,13 +873,14 @@
 	line-height: 18px;
 	text-align: center;
 	text-transform: uppercase;
-	border: 1px solid #E5E5E5;
+	border: 1px solid var(--special-one-more-grey);
 	background-color: var(--white);
 }
 
 .filter-top{
 	background-color: var(--special-beige-dull);
 	border-radius: 5px;
+	margin-bottom: 28px;
 }
 
 .filter-sort{
@@ -861,10 +889,14 @@
 	font-weight: normal;
 	line-height: 18px;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 0;
 }
 
 .filter-sort-list{
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .filter-sort-by-price{
@@ -875,6 +907,7 @@
 	color: var(--basic-red);
 	border: none;
 	background-color: transparent;
+	padding: 10px 0;
 }
 
 .filter-sort-by-type{
@@ -886,6 +919,7 @@
 	border: none;
 	background-color: transparent;
 	text-decoration: underline dotted var(--basic-red);
+	padding: 10px 0;
 }
 
 .filter-sort-by-type:hover, .filter-sort-by-functional:hover{
@@ -902,6 +936,7 @@
 	border: none;
 	background-color: transparent;
 	text-decoration: underline dotted var(--basic-red);
+	padding: 10px 0;
 }
 
 .filter-arrows-up{
@@ -916,6 +951,8 @@
 
 .page-number-list{
 	list-style: none;
+	padding: 0 0 0 0;
+	margin: 0;
 }
 
 .page-number-current{
@@ -936,7 +973,7 @@
 	text-align: center;
 	text-decoration: none;
 	color: var(--black);
-	border: 1px solid #E5E5E5;
+	border: 1px solid var(--special-one-more-grey);
 	border-radius: 2px;
 }
 
@@ -950,6 +987,7 @@
 
 .few-words-wrapper{
 	background-color: var(--basic-background);
+	padding: 64px 0 68px 0;
 }
 
 .few-words-title{
@@ -957,12 +995,14 @@
 	font-weight: 400;
 	line-height: 30px;
 	text-transform: uppercase;
+	margin: 0 0 25px 0;
 }
 
 .few-words-text{
 	font-family: "PT Sans";
 	font-size: 13px;
 	line-height: 24px;
+	margin: 0;
 }
 
 /*---Grids---*/
@@ -981,6 +1021,10 @@
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
+}
+
+.main-header{
+	padding-bottom: 60px;
 }
 
 .main-header-top-bar{
@@ -1184,6 +1228,7 @@
 	padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	grid-row-gap: 18px;
 }
 
 .products-item{
