@@ -16,7 +16,8 @@
             </a>
 
           <div class="search">
-            <!--Форма для поиска-->
+            <svg class="search-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+            <input type="search" placeholder="Поиск:"> 
           </div>
 
           <a class="bookmarks" href="">Закладки: 0</a>
@@ -35,7 +36,10 @@
         </div>
 
         <div class="header-bottom-right">
-          <a class="white-button-login" href="">Войти</a>
+          <a class="white-button-login" href="">
+          <svg class="white-button-login-icon" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.2 9L5.7.5v6H0v5h5.7v6L14.2 9z"/><path d="M16.2 15.5h-4.8v2h4.8c2 0 2.8-1.8 2.9-3v-11c0-1.2-.8-3-3-3h-4.7v2h4.8c.8 0 1 .7 1 1v11c0 .3-.2 1-1 1z"/></svg>
+          Войти
+          </a>
           <a class="white-button-register" href="">Регистрация</a>
         </div>
       </div>
@@ -134,6 +138,10 @@
           <li class="products-item">
             <div class="products-photo">
               <img style="margin-bottom: 2px" src="img/bfg9000.jpg" alt="Перфоратор bfg9000" class="products-item-img" width="184" height="164">
+              <div class="products-buttons">
+                <button class="buy">Купить</button>
+                <button class="add">В закладки</button>
+              </div>
             </div>
             <div class="products-info">
               <h3 class="products-title">Перфоратор BOSCH BFG 9000</h3>
@@ -142,9 +150,13 @@
             </div>
           </li>
 
-          <li class="products-item">
+          <li class="products-item new">
             <div class="products-photo">
               <img style="margin: 0 12px 9px 0" src="img/bfg3000.jpg" alt="Перфоратор bfg3000" class="products-item-img" width="127" height="112">
+              <div class="products-buttons">
+                <button class="buy">Купить</button>
+                <button class="add">В закладки</button>
+              </div>
             </div>
             <div class="products-info">
               <h3 class="products-title">Перфоратор BOSCH BFG 9000</h3>
@@ -156,6 +168,10 @@
           <li class="products-item">
             <div class="products-photo">
               <img style="margin: 0 10px 7px 0" src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
+              <div class="products-buttons">
+                <button class="buy">Купить</button>
+                <button class="add">В закладки</button>
+              </div>
             </div>
               <div class="products-info">
                 <h3 class="products-title">Перфоратор BOSCH BFG 6000</h3>
@@ -164,9 +180,13 @@
               </div>
           </li>
 
-          <li class="products-item">
+          <li class="products-item new">
             <div class="products-photo">
               <img style="margin: 0 12px 9px 0" src="img/bfg2000.jpg" alt="Перфоратор bfg2000" class="products-item-img" width="127" height="112">
+              <div class="products-buttons">
+                <button class="buy">Купить</button>
+                <button class="add">В закладки</button>
+              </div>
             </div>
               <div class="products-info">
                 <h3 class="products-title">Перфоратор BOSCH BFG 2000</h3>
@@ -216,7 +236,7 @@
               </ul>
 
               <div class="services-button-selected-list">
-                <div class="services-button-selected">
+                <div class="services-button-selected delivery">
                   <h2 class="services-button-selected-title">Доставка</h2>
                   <p class="services-button-selected-text">Мы с удовольствием доставим ваш товар прямо<br>
                     к вашему подъезду совершенно бесплатно!<br>
@@ -224,7 +244,7 @@
                     поднимая его на ваш этаж!</p>
                 </div>
 
-                <div class="services-button-selected hidden">
+                <div class="services-button-selected guarantee hidden">
                   <h2 class="services-button-selected-title">Гарантия</h2>
                   <p class="services-button-selected-text">Если купленный у нас товар поломается или заискрит, 
                   а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
@@ -232,7 +252,7 @@
                 </div>
 
                 <div class="services-button-selected hidden">
-                  <h2 class="services-button-selected-title">Кредит</h2>
+                  <h2 class="services-button-selected-title credit">Кредит</h2>
                   <p class="services-button-selected-text">
                   Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
 
@@ -319,9 +339,27 @@
             Все права защищены</p>
 
           <ul class="socials-list">
-            <li><a class="socials-list-item vk" href=""></a></li>
-            <li><a class="socials-list-item fb" href=""></a></li>
-            <li><a class="socials-list-item inst" href=""></a></li>
+            <li>
+              <a class="socials-list-item vk" href="">
+                <svg viewBox="0 0 44 44">
+                  <circle cx="22" cy="22" r="20"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="socials-list-item fb" href="">
+                <svg viewBox="0 0 44 44">
+                  <circle cx="22" cy="22" r="20"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="socials-list-item inst" href="">
+                <svg viewBox="0 0 44 44">
+                  <circle cx="22" cy="22" r="20"/>
+                </svg>
+              </a>
+            </li>
           </ul>
 
           <div class="main-footer-down-right">

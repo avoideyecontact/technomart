@@ -119,6 +119,7 @@
 	display: block;
 	width: 195px;
 	padding: 10px 0;
+	margin-top: 25px;
 	border-radius: 2px;
 	background-color: var(--special-red-credit);
 	text-align: center;
@@ -189,8 +190,74 @@
 	background: var(--error);
 }
 
-.search{
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button, 
+input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}	/*Законно ли такое решение?(Убираю крестик в поле)*/
 
+.search{
+	position: relative;
+	padding-left: 41px;
+}
+
+.search-icon{
+	position: absolute;
+	top: 12px;
+	left: 17px;
+	fill: var(--white);
+	opacity: 0.3;
+}
+
+.search:hover .search-icon{
+	opacity: 1;
+}
+
+.search input{
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	border: none;
+	outline: none;
+	font-family: Cuprum;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0px;
+	color: white;
+}
+
+.search input::placeholder{
+	font-family: Cuprum;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0px;
+	color: var(--white);
+}
+
+.search input:hover{
+	cursor: pointer;
+}
+
+.search input:focus{
+	background-color: var(--white);
+}
+
+.search:focus-within{
+	background-color: var(--white);
+}
+
+.search:focus-within input{
+	color: black;
+}
+
+.search:focus-within .search-icon{
+	fill: var(--basic-red);
+	opacity: 1;
 }
 
 .bookmarks{
@@ -270,6 +337,10 @@
 	background-color: var(--darkest-blue);
 }
 
+.basket:focus::before{
+	opacity: 0.3;
+}
+
 .order{
 	background: var(--basic-green);
 	text-align: center;
@@ -288,10 +359,6 @@
 .order:focus{
 	background: var(--basic-green);
 	color: var(--faded-white);
-}
-
-.header-bottom-wrapper{
-	/*padding: 41px 0 40px 0;*/
 }
 
 .main-title{
@@ -363,16 +430,27 @@
 	padding: 12px 27px 12px 45px;
 }
 
-.white-button-login::before{
-	content: "";
+.white-button-login-icon{
 	position: absolute;
 	left: 19px;
-	bottom: 16px;
-	width: 20px;
-	height: 17px;
-	background-image: url("../img/icon-login.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
+	top: 14px;
+	fill: var(--basic-greylight);
+}
+
+.white-button-login:hover{
+	color: var(--basic-red);
+}
+
+.white-button-login:hover .white-button-login-icon{
+	fill: var(--basic-grey);
+}
+
+.white-button-login:focus{
+	color: var(--basic-greylight);
+}
+
+.white-button-login:focus .white-button-login-icon{
+	fill: var(--basic-greylight);
 }
 
 .white-button-register{
@@ -384,7 +462,14 @@
 	text-decoration: none;
 	color: var(--black);
 	padding: 12px 24px;
-	/*margin-left: 10px;*/
+}
+
+.white-button-register:hover{
+	color: var(--basic-red);
+}
+
+.white-button-register:focus{
+	color: var(--basic-greylight);
 }
 
 .main-nav{
@@ -396,7 +481,6 @@
 	list-style: none;
 	padding: 0 34px;
 	margin: 0;
-
 }
 
 .nav-link{
@@ -405,7 +489,7 @@
 	line-height: 24px;
 	text-decoration: none;
 	color: var(--white);
-	padding: 16px 18px 20px 18px; 
+	padding: 16px 26px 20px 26px;
 }
 
 .nav-link:hover{
@@ -631,6 +715,7 @@
 }
 
 .products-item{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -640,6 +725,19 @@
 	font-family: "PT Sans";
 	font-weight: bold;
 	padding-bottom: 21px;
+	overflow: hidden;
+}
+
+.products-item:hover{
+	filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.products-item:hover .products-buttons{
+	display: flex;
+}
+
+.products-item:hover img{
+	display: none;
 }
 
 .products-info{
@@ -649,9 +747,102 @@
 }
 
 .products-photo{
+	position: relative;
 	display: flex;
+	/*display: none;*/
 	height: 177px;
 	align-items: center;
+}
+
+.products-buttons{
+	margin-top: -10px;
+	/*position: absolute;*/
+	/*display: flex;*/
+
+	display: none;
+	flex-direction: column;
+	width: 135px;
+	/*top: 38px;*/
+	/*left: 23px;*/
+	font-family: Cuprum;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0px;
+}
+
+.buy{
+	position: relative;
+	border: none;
+	padding: 10px 0 10px 0;
+	text-align: left;
+	padding-left: 53px;
+	margin-bottom: 10px;
+	background: var(--basic-green);
+	box-shadow: inset 0px -3px 0px #367315;
+	border-radius: 2px;
+	color: var(--white);
+	text-transform: uppercase;
+}
+
+.buy::before{
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 15px;
+	left: 30px;
+	top: 10px;
+	background-image: url(../img/icon-cart.svg);
+	opacity: 0.3;
+}
+
+.buy:hover{
+	background-color: var(--success);
+	cursor: pointer;
+}
+
+.buy:focus{
+	outline: none;
+	background-color: #518534;
+}
+
+.add{
+	padding: 8px 0 6px 0;
+	border: 3px solid var(--basic-green);
+	box-sizing: border-box;
+	border-radius: 2px;
+	color: var(--basic-dark-blue);
+	text-transform: uppercase;
+}
+
+.add:hover{
+	cursor: pointer;
+	border-color: var(--basic-dark-blue);
+}
+
+.add:focus{
+	outline: none;
+	opacity: 0.5;
+}
+
+.new::after{
+	position: absolute;
+	content: "NEW";
+	font-family: Cuprum;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0px;
+	text-align: center;
+	color: var(--white);
+	right: -27px;
+	top: 8px;
+	width: 100px;
+	padding: 6px 0;
+	background-color: var(--basic-red);
+	transform: rotate(45deg);
 }
 
 .products-title{
@@ -737,10 +928,6 @@
 	background: var(--basic-background);
 	padding: 66px 0 100px 0
 }
-/*
-.services-top{
-	padding-bottom: 70px;
-}*/
 
 .services-title{
 	font-size: 30px;
@@ -806,8 +993,40 @@
 }
 
 .services-button-selected{
+	position: relative;
 	padding-left: 80px;
 	padding-top: 67px;
+	width: 331px;
+}
+
+.delivery::after{
+	position: absolute;
+	content: "";
+	width: 468px;
+	height: 261px;
+	top: 88px;
+	left: 231px;
+	background-image: url(../img/truck.png);
+}
+
+.guarantee::after{
+	position: absolute;
+	content: "";
+	width: 468px;
+	height: 261px;
+	top: 70px;
+	left: 320px;
+	background-image: url(../img/guarantee.png);
+}
+
+.credit::after{
+	position: absolute;
+	content: "";
+	width: 465px;
+	height: 285px;
+	top: 65px;
+	left: 246px;
+	background-image: url(../img/credit.png);
 }
 
 .services-button-selected-title{
@@ -931,6 +1150,11 @@
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
+.main-footer-logo:focus{
+	background: var(--error);
+	box-shadow: inset 0px -5px 0px var(--main-logo-shadow-dark);
+}
+
 .main-footer-logo svg{
 	padding-top: 20px;
 }
@@ -1037,6 +1261,18 @@
 	width: 44px;
 	height: 44px;
 	background: url(../img/circle-shape.svg) no-repeat;
+}
+
+.socials-list-item svg{
+	fill: #212A3A;
+}
+
+.socials-list-item:hover svg{
+	fill: var(--basic-red);
+}
+
+.socials-list-item:focus svg{
+	fill: var(--basic-red);
 }
 
 .vk::after{
@@ -1447,8 +1683,6 @@
 }
 
 .header-bottom-center{
-/*	display: grid;
-	grid-template-columns: 1fr;*/
 	display: flex;
 	flex-direction: column;
 }
