@@ -1453,16 +1453,14 @@ input[type='search']::-webkit-search-results-decoration {
 	position: relative;
 	list-style: none;
 	color: var(--black);
-	padding: 21px 0 20px 34px;
+	padding: 21px 0 20px 0;
 }
 
-.breadcrumbs::before{
-	position: absolute;
-	content: "";
+.breadcrumbs-home{
+	display: block;
 	width: 14px;
 	height: 12px;
-	top: 24px;
-	left: 17px;
+	margin-top: 3px;
 	background-image: url("../img/icon-home.svg");
 }
 
@@ -1474,6 +1472,7 @@ input[type='search']::-webkit-search-results-decoration {
 	text-transform: uppercase;
 	color: var(--black);
 	padding-left: 40px;
+	text-decoration: none;
 }
 
 .breadcrumbs-item::before{
@@ -1774,6 +1773,7 @@ input::-webkit-inner-spin-button {
 }
 
 .show-button{
+	width: 100%;
 	font-family: PT Sans;
 	font-size: 13px;
 	line-height: 18px;
@@ -1809,6 +1809,8 @@ input::-webkit-inner-spin-button {
 }
 
 .sort-by-price{
+	display: block;
+	cursor: pointer;
 	font-family: PT Sans;
 	font-size: 13px;
 	line-height: 18px;
@@ -1823,6 +1825,8 @@ input::-webkit-inner-spin-button {
 }
 
 .sort-by-type{
+	display: block;
+	cursor: pointer;
 	font-family: PT Sans;
 	font-size: 13px;
 	line-height: 18px;
@@ -1842,6 +1846,8 @@ input::-webkit-inner-spin-button {
 }
 
 .sort-by-functional{
+	display: block;
+	cursor: pointer;
 	font-family: PT Sans;
 	font-size: 13px;
 	line-height: 18px;
@@ -1877,12 +1883,14 @@ input::-webkit-inner-spin-button {
 }
 
 .sort-arrows-up{
+	cursor: pointer;
 	border: none;
 	background-color: transparent;
 	padding: 0;
 }
 
 .sort-arrows-down{
+	cursor: pointer;
 	border: none;
 	background-color: transparent;
 	padding: 0;
@@ -2218,7 +2226,16 @@ input::-webkit-inner-spin-button {
 }
 
 .hidden{
-	display: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 /*   Modal   */
@@ -2263,10 +2280,6 @@ input::-webkit-inner-spin-button {
 
 .modal-close::after{
 	transform: rotate(-45deg);
-}
-
-.modal-close:focus{
-	outline: none;
 }
 
 .modal-inputs-wrapper{
@@ -2399,10 +2412,6 @@ input::-webkit-inner-spin-button {
 	transform: rotate(-45deg);
 }
 
-.map-popup-close:focus{
-	outline: none;
-}
-
 /*  Catalog modal  */
 
 .modal-added{
@@ -2509,8 +2518,4 @@ input::-webkit-inner-spin-button {
 
 .modal-added-close::after{
 	transform: rotate(-45deg);
-}
-
-.modal-added-close:focus{
-	outline: none;
 }

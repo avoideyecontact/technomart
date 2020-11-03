@@ -66,9 +66,10 @@
   <main>
 
     <ul class="breadcrumbs center">
-      <li class="breadcrumbs-item">Каталог</li>
-      <li class="breadcrumbs-item">Инструмент</li>
-      <li class="breadcrumbs-item">Перфораторы</li>
+      <li><a href="" class="breadcrumbs-home" title="На главную"></a></li>
+      <li><a class="breadcrumbs-item" href="">Каталог</a></li>
+      <li><a class="breadcrumbs-item" href="">Инструмент</a></li>
+      <li><a class="breadcrumbs-item">Перфораторы</a></li>
     </ul>
 
     <h1 class="catalog-title center">Перфораторы</h1>
@@ -100,69 +101,70 @@
                 </div>
               </div>
           </fieldset>
+        
+
+          <div class="developers-wrapper">
+            <h3 class="filter-firms">Производители:</h3>
+            <ul class="filter-firms-list">
+              <li class="filter-firms-item">
+                <label class="checkbox-item">
+                  <input class="checkbox-input" type="checkbox" id="bosch" value="bosch">
+                  <span class="checkbox-icon"></span>
+                  Bosch
+                </label>
+              </li>
+              <li class="filter-firms-item">
+                <label class="checkbox-item">
+                  <input class="checkbox-input" type="checkbox" value="interskol" checked>
+                  <span class="checkbox-icon"></span>
+                  Интерскол
+                </label>
+              </li>
+              <li class="filter-firms-item">
+                <label class="checkbox-item">
+                  <input class="checkbox-input" type="checkbox" value="makita">
+                  <span class="checkbox-icon"></span>
+                  Makita
+              </label>
+              </li>
+              <li class="filter-firms-item">
+                <label class="checkbox-item">
+                  <input class="checkbox-input" type="checkbox" value="dewalt" disabled>
+                  <span class="checkbox-icon"></span>
+                  Dewalt
+              </label>
+              </li>
+              <li class="filter-firms-item">
+                <label class="checkbox-item">
+                  <input class="checkbox-input" type="checkbox" value="hitachi" disabled checked>
+                  <span class="checkbox-icon"></span>
+                  Hitachi
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="supply-wrapper">
+            <h3 class="filter-powersupply">Питание:</h3>
+            <ul class="filter-powersupply-list">
+              <li class="filter-powersupply-item">
+                <label class="radio-item">
+                  <input class="radio-input" type="radio" name="supply" value="1" checked>
+                  <span class="radio-icon"></span>
+                  Аккумуляторные
+                </label>
+              </li>
+              <li class="filter-powersupply-item">
+                <label class="radio-item">
+                  <input class="radio-input" type="radio" name="supply" value="2">
+                  <span class="radio-icon"></span>
+                  Сетевые
+                </label>
+              </li>
+            </ul>
+          </div>
+          <button class="show-button" type="submit">Показать</button>
         </form>
-
-        <div class="developers-wrapper">
-          <h3 class="filter-firms">Производители:</h3>
-          <ul class="filter-firms-list">
-            <li class="filter-firms-item">
-              <label class="checkbox-item">
-                <input class="checkbox-input" type="checkbox" id="bosch" value="bosch">
-                <span class="checkbox-icon"></span>
-                Bosch
-              </label>
-            </li>
-            <li class="filter-firms-item">
-              <label class="checkbox-item">
-                <input class="checkbox-input" type="checkbox" value="interskol">
-                <span class="checkbox-icon"></span>
-                Интерскол
-              </label>
-            </li>
-            <li class="filter-firms-item">
-              <label class="checkbox-item">
-                <input class="checkbox-input" type="checkbox" value="makita">
-                <span class="checkbox-icon"></span>
-                Makita
-            </label>
-            </li>
-            <li class="filter-firms-item">
-              <label class="checkbox-item">
-                <input class="checkbox-input" type="checkbox" value="dewalt">
-                <span class="checkbox-icon"></span>
-                Dewalt
-            </label>
-            </li>
-            <li class="filter-firms-item">
-              <label class="checkbox-item">
-                <input class="checkbox-input" type="checkbox" value="hitachi">
-                <span class="checkbox-icon"></span>
-                Hitachi
-              </label>
-            </li>
-          </ul>
-        </div>
-
-        <div class="supply-wrapper">
-          <h3 class="filter-powersupply">Питание:</h3>
-          <ul class="filter-powersupply-list">
-            <li class="filter-powersupply-item">
-              <label class="radio-item">
-                <input class="radio-input" type="radio" name="supply" value="1" checked>
-                <span class="radio-icon"></span>
-                Аккумуляторные
-              </label>
-            </li>
-            <li class="filter-powersupply-item">
-              <label class="radio-item">
-                <input class="radio-input" type="radio" name="supply" value="2">
-                <span class="radio-icon"></span>
-                Сетевые
-              </label>
-            </li>
-          </ul>
-        </div>
-        <button class="show-button" type="submit">Показать</button>
       </div>
 
       <div class="catalog-right">
@@ -170,25 +172,25 @@
           <h3 class="sort-title">Сортировка:</h3>
           <ul class="sort-attributes">
             <li>
-              <button class="sort-by-price active">По цене</button>
+              <a class="sort-by-price active">По цене</a>
             </li>
             <li>
-              <button class="sort-by-type">По типу</button>
+              <a class="sort-by-type">По типу</a>
             </li>
             <li>
-              <button class="sort-by-functional">По функционалу</button>
+              <a class="sort-by-functional">По функционалу</a>
             </li>
             <li class="sort-arrows">
-              <button class="sort-arrows-up active">
+              <a class="sort-arrows-up active" title="Сортировка по возрастанию">
                 <svg style="transform: rotate(180deg)" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11"/>
                 </svg>
-              </button>
-              <button class="sort-arrows-down">
+              </a>
+              <a class="sort-arrows-down" title="Сортировка по убыванию">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11"/>
                 </svg>
-              </button>
+              </a>
             </li>
           </ul>
 
@@ -198,7 +200,7 @@
           <ul class="products-list">
             <li class="products-item">
               <div class="products-photo">
-                <img style="margin: 0 10px 7px 0" src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
+                <img src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -212,7 +214,7 @@
             </li>
             <li class="products-item">
               <div class="products-photo">
-                <img style="margin: 0 10px 7px 0" src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
+                <img src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -226,7 +228,7 @@
             </li>
             <li class="products-item new">
               <div class="products-photo">
-                <img style="margin: 0 10px 7px 0" src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
+                <img src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -240,7 +242,7 @@
             </li>
             <li class="products-item new">
               <div class="products-photo">
-                <img style="margin: 0 12px 9px 0" src="img/bfg3000.jpg" alt="Перфоратор bfg3000" class="products-item-img" width="127" height="112">
+                <img src="img/bfg3000.jpg" alt="Перфоратор bfg3000" class="products-item-img" width="127" height="112">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -254,7 +256,7 @@
             </li>
             <li class="products-item">
               <div class="products-photo">
-                <img style="margin: 0 10px 7px 0" src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
+                <img src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -268,7 +270,7 @@
             </li>
             <li class="products-item new">
               <div class="products-photo">
-                <img style="margin: 0 12px 9px 0" src="img/bfg2000.jpg" alt="Перфоратор bfg2000" class="products-item-img" width="127" height="112">
+                <img src="img/bfg2000.jpg" alt="Перфоратор bfg2000" class="products-item-img" width="127" height="112">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -282,7 +284,7 @@
             </li>
             <li class="products-item new">
               <div class="products-photo">
-                <img style="margin: 0 12px 9px 0" src="img/bfg3000.jpg" alt="Перфоратор bfg3000" class="products-item-img" width="127" height="112">
+                <img src="img/bfg3000.jpg" alt="Перфоратор bfg3000" class="products-item-img" width="127" height="112">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -296,7 +298,7 @@
             </li>
             <li class="products-item">
               <div class="products-photo">
-                <img style="margin: 0 10px 7px 0" src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
+                <img src="img/bfg6000.jpg" alt="Перфоратор bfg6000" class="products-item-img" width="144" height="128">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
@@ -310,7 +312,7 @@
             </li>
             <li class="products-item new">
               <div class="products-photo">
-                <img style="margin: 0 12px 9px 0" src="img/bfg2000.jpg" alt="Перфоратор bfg2000" class="products-item-img" width="127" height="112">
+                <img src="img/bfg2000.jpg" alt="Перфоратор bfg2000" class="products-item-img" width="127" height="112">
                 <div class="products-buttons">
                   <button class="buy">Купить</button>
                   <button class="add">В закладки</button>
