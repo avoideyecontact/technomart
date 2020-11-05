@@ -49,8 +49,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: 
-  		url("../fonts/cuprum.woff2") format("woff2"), 
+  src:
+  		url("../fonts/cuprum.woff2") format("woff2"),
   		url("../fonts/cuprum.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -58,8 +58,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: 
-  		url("../fonts/cuprumbold.woff2") format("woff2"), 
+  src:
+  		url("../fonts/cuprumbold.woff2") format("woff2"),
   		url("../fonts/cuprumbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -67,8 +67,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: 
-  		url("../fonts/cuprumbolditalic.woff2") format("woff2"), 
+  src:
+  		url("../fonts/cuprumbolditalic.woff2") format("woff2"),
   		url("../fonts/cuprumbolditalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
@@ -76,8 +76,8 @@
 
 @font-face {
   font-family: "Cuprum";
-  src: 
-  		url("../fonts/cuprumitalic.woff2") format("woff2"), 
+  src:
+  		url("../fonts/cuprumitalic.woff2") format("woff2"),
   		url("../fonts/cuprumitalic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
@@ -87,7 +87,7 @@
 
 @font-face {
     font-family: "PT Sans";
-    src: 
+    src:
         url("../fonts/ptsans.woff2") format("woff2"),
         url("../fonts/ptsans.woff") format("woff");
     font-weight: normal;
@@ -117,6 +117,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--white);
+  cursor: pointer;
 }
 
 .red-button-services{
@@ -155,7 +156,7 @@
 
 .page-body{
 	position: relative;
-	font-family: "Cuprum";
+	font-family: "Cuprum", Arial, sans-serif;
 	background-color: var(--white);
 }
 
@@ -195,12 +196,12 @@
 	background: var(--error);
 }
 
-input[type='search']::-webkit-search-decoration, 
-input[type='search']::-webkit-search-cancel-button, 
-input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   display: none;
-}	/*Законно ли такое решение?(Убираю крестик в поле)*/
+}
 
 .search{
 	position: relative;
@@ -225,7 +226,7 @@ input[type='search']::-webkit-search-results-decoration {
 	background-color: inherit;
 	border: none;
 	outline: none;
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
@@ -235,11 +236,11 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .search input::placeholder{
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 40px;
 	letter-spacing: 0px;
 	color: var(--white);
 }
@@ -264,6 +265,10 @@ input[type='search']::-webkit-search-results-decoration {
 	fill: var(--basic-red);
 	opacity: 1;
 }
+
+/**/
+
+/**/
 
 .bookmarks{
 	position: relative;
@@ -403,7 +408,7 @@ input[type='search']::-webkit-search-results-decoration {
 	bottom: 10px;
 	width: 19px;
 	height: 19px;
-	background-image: url("../img/icon-phone.svg");
+  background-image: url("../img/icon-phone.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
@@ -642,11 +647,13 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .slide-1{
-	background: url(../img/sliderperforatori.jpg)
+  background-color: var(--basic-greylight);
+  background: url(../img/sliderperforatori.jpg);
 }
 
 .slide-2{
-	background: url(../img/sliderperforatori.jpg)
+  background-color: var(--basic-greylight);
+  background: url(../img/sliderdreli.jpg);
 }
 
 .slider-top{
@@ -698,17 +705,31 @@ input[type='search']::-webkit-search-results-decoration {
 
 .slider-radio{
 	position: absolute;
-	top: 217px;
-	left: 294px;
+	top: 220px;
+	left: 295px;
 }
 
-.slider-radio input{
-	width: 12px;
-	height: 12px;
+.slider-radio-input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
-.slider-radio input:last-child{
-	margin-left: 4px;
+.slider-radio-icon{
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFF' width='10' height='10'%3E%3Ccircle cx='50%25' cy='50%25' r='5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  padding-right: 5px;
+}
+
+.slider-radio-input:checked + .slider-radio-icon{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFF' width='10' height='10'%3E%3Ccircle cx='50%25' cy='50%25' r='5'/%3E%3Ccircle fill='%23FF0000' cx='50%25' cy='50%25' r='3'/%3E%3C/svg%3E");  background-repeat: no-repeat;
 }
 
 .products-list{
@@ -735,7 +756,7 @@ input[type='search']::-webkit-search-results-decoration {
 	align-items: center;
 	background: var(--white);
 	border: 1px solid var(--special-grey-light);
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-weight: bold;
 	padding-bottom: 21px;
 	overflow: hidden;
@@ -772,7 +793,7 @@ input[type='search']::-webkit-search-results-decoration {
 	display: none;
 	flex-direction: column;
 	width: 135px;
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -801,6 +822,7 @@ input[type='search']::-webkit-search-results-decoration {
 	height: 15px;
 	left: 30px;
 	top: 10px;
+  background-color: var(--basic-greylight);
 	background-image: url(../img/icon-cart.svg);
 	opacity: 0.3;
 }
@@ -838,7 +860,7 @@ input[type='search']::-webkit-search-results-decoration {
 .new::after{
 	position: absolute;
 	content: "NEW";
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -911,7 +933,7 @@ input[type='search']::-webkit-search-results-decoration {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 17px;
 	font-weight: 700;
 	line-height: 18px;
@@ -947,7 +969,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .services-text{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	margin: 0;
@@ -988,7 +1010,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .services-button:hover{
-	background:var(--basic-dark-blue-darker);
+	background: var(--basic-dark-blue-darker);
 }
 
 .services-button:focus{
@@ -1049,7 +1071,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .services-button-selected-text{
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	font-style: normal;
 	font-weight: 400;
@@ -1067,7 +1089,7 @@ input[type='search']::-webkit-search-results-decoration {
 	line-height: 30px;
 	text-transform: uppercase;
 	margin: 0 0 24px 0;
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 30px;
 	font-style: normal;
 	font-weight: 400;
@@ -1077,7 +1099,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .about-text{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	font-style: normal;
@@ -1125,14 +1147,15 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .contacts-text{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
-	margin: 0 0 32px 0;	
+	margin: 0 0 32px 0;
 }
 
 .contacts-map{
 	margin-bottom: 21px;
+  cursor: pointer;
 }
 
 .contacts-button{
@@ -1269,6 +1292,7 @@ input[type='search']::-webkit-search-results-decoration {
 	display: block;
 	width: 44px;
 	height: 44px;
+  background-color: var(--basic-greylight);
 	background: url(../img/circle-shape.svg) no-repeat;
 }
 
@@ -1361,7 +1385,7 @@ input[type='search']::-webkit-search-results-decoration {
 /*---Catalog---*/
 
 .catalog-body{
-	font-family: "Cuprum";
+	font-family: "Cuprum", Arial, sans-serif;
 	background-color: var(--white);
 }
 
@@ -1453,7 +1477,7 @@ input[type='search']::-webkit-search-results-decoration {
 	position: relative;
 	list-style: none;
 	color: var(--black);
-	padding: 21px 0 20px 0;
+	padding: 18px 0 23px 4px;
 }
 
 .breadcrumbs-home{
@@ -1466,7 +1490,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .breadcrumbs-item{
 	position: relative;
-	font-family: PT Sans;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1483,7 +1507,7 @@ input[type='search']::-webkit-search-results-decoration {
 	top: 3px;
 	left: 18px;
 	background-image: url("../img/icon-right-small.svg");
-	
+
 }
 
 .catalog-title{
@@ -1502,7 +1526,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .filter-title{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: normal;
@@ -1528,7 +1552,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .filter-item legend {
-	font-family: PT Sans;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 17px;
 	font-style: normal;
 	font-weight: 700;
@@ -1587,8 +1611,8 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .price-controls label {
-  font-family: PT Sans;
-	font-size: 17px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 18px;
@@ -1597,19 +1621,19 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .price-controls input {
-  width: 95px;
-  padding: 10px 0;
-  text-align: center;
-  color: #283136;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--special-beige-dull);
-  font-family: inherit;
-  font-size: inherit;
+	width: 95px;
+	padding: 10px 0;
+	text-align: center;
+	color: #283136;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--special-beige-dull);
+	font-family: inherit;
+	font-size: inherit;
 }
 
 .filter-dash{
-	font-family: PT Sans;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
@@ -1663,6 +1687,7 @@ input::-webkit-inner-spin-button {
 
 .checkbox-item{
 	padding-left: 35px;
+  cursor: pointer;
 }
 
 .checkbox-icon{
@@ -1675,7 +1700,7 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-firms{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 17px;
 	line-height: 30px;
 	font-weight: bold;
@@ -1692,7 +1717,7 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-firms-item{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 19px;
 	text-transform: uppercase;
@@ -1700,13 +1725,13 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-powersupply{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 17px;
 	line-height: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
 	border-radius: 5px;
-	padding: 17px 0 20px 0;
+	padding: 13px 0 22px 0;
 	margin: 0;
 }
 
@@ -1717,7 +1742,7 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-powersupply-item{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 19px;
 	text-transform: uppercase;
@@ -1726,7 +1751,9 @@ input::-webkit-inner-spin-button {
 
 .radio-item{
 	padding-left: 35px;
+  cursor: pointer;
 }
+
 
 .radio-icon{
 	position: absolute;
@@ -1774,7 +1801,7 @@ input::-webkit-inner-spin-button {
 
 .show-button{
 	width: 100%;
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-align: center;
@@ -1783,23 +1810,25 @@ input::-webkit-inner-spin-button {
 	background-color: var(--white);
 	padding: 10px 0;
 	margin-top: 12px;
+  cursor: pointer;
 }
 
 .sort{
 	background-color: var(--special-beige-dull);
 	border-radius: 5px;
 	padding: 0 16px 0 20px;
-	margin-bottom: 26px;
+	margin-bottom: 24px;
 }
 
 .sort-title{
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 18px;
 	text-transform: uppercase;
 	margin: 0;
-	padding: 10px 0;
+	padding-bottom: 13px;
+  padding-top: 9px;
 }
 
 .sort-attributes{
@@ -1811,7 +1840,9 @@ input::-webkit-inner-spin-button {
 .sort-by-price{
 	display: block;
 	cursor: pointer;
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1820,14 +1851,15 @@ input::-webkit-inner-spin-button {
 	background-color: transparent;
 	text-decoration: underline dotted var(--basic-red);
 	text-underline-position: under;
-	padding: 10px 0;
+	padding-bottom: 13px;
+  padding-top: 9px;
 	margin-right: 70px;
 }
 
 .sort-by-type{
 	display: block;
 	cursor: pointer;
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1836,7 +1868,8 @@ input::-webkit-inner-spin-button {
 	background-color: transparent;
 	text-decoration: underline dotted var(--basic-red);
 	text-underline-position: under;
-	padding: 10px 0;
+	padding-bottom: 13px;
+  padding-top: 9px;
 	margin-right: 65px;
 }
 
@@ -1848,7 +1881,7 @@ input::-webkit-inner-spin-button {
 .sort-by-functional{
 	display: block;
 	cursor: pointer;
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1857,7 +1890,8 @@ input::-webkit-inner-spin-button {
 	background-color: transparent;
 	text-decoration: underline dotted var(--basic-red);
 	text-underline-position: under;
-	padding: 10px 0;
+	padding-bottom: 14px;
+  padding-top: 8px;
 	margin-right: 46px;
 }
 
@@ -1912,7 +1946,7 @@ input::-webkit-inner-spin-button {
 }
 
 .page-number-item{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-align: center;
@@ -1931,6 +1965,7 @@ input::-webkit-inner-spin-button {
 	border: none;
 	color: var(--white);
 	padding: 11px 16px;
+  cursor: none;
 }
 
 .next{
@@ -1968,7 +2003,7 @@ input::-webkit-inner-spin-button {
 }
 
 .few-words-text{
-	font-family: "PT Sans";
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	margin: 0;
@@ -2008,7 +2043,7 @@ input::-webkit-inner-spin-button {
 .header-bottom-wrapper{
   	display: flex;
   	justify-content: space-between;
-  	align-content: flex-start; 
+  	align-content: flex-start;
 }
 
 .header-bottom-center{
@@ -2079,7 +2114,7 @@ input::-webkit-inner-spin-button {
 .popular-firms{
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 70px; 
+	margin-bottom: 70px;
 }
 
 .popular-firms-list{
@@ -2293,7 +2328,7 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-input-text{
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
@@ -2313,7 +2348,7 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-input input::placeholder{
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	font-style: normal;
 	font-weight: 400;
@@ -2337,7 +2372,7 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-letter textarea::placeholder{
-	font-family: PT Sans;
+	font-family: PT Sans, Arial, sans-serif;
 	font-size: 13px;
 	font-style: normal;
 	font-weight: 400;
@@ -2353,7 +2388,7 @@ input::-webkit-inner-spin-button {
 
 .modal-send-button{
 	width: 100%;
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -2384,7 +2419,7 @@ input::-webkit-inner-spin-button {
 
 .map-popup-close {
 	position: absolute;
-	top: 10px;
+	   top: 10px;
 	right: 10px;
 	border: 0;
 	width: 21px;
@@ -2436,8 +2471,9 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-added-text{
+  display: inline;
 	position: relative;
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 700;
@@ -2471,7 +2507,7 @@ input::-webkit-inner-spin-button {
 	padding-top: 11px;
 	padding-bottom: 9px;
 	text-transform: uppercase;
-	font-family: Cuprum;
+	font-family: Cuprum, Arial, sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
