@@ -4,13 +4,13 @@ if (document.querySelector('.map-popup')) {
   const map_button_open = document.querySelector('.contacts-map');
   const map_button_close = document.querySelector('.map-popup-close');
 
-  map_button_open.addEventListener("click", function(evt){
+  map_button_open.addEventListener('click', function(evt){
     evt.preventDefault();
     map.classList.remove('hidden');
     map.classList.add('animation');
   });
 
-  map_button_close.addEventListener("click", function(evt){
+  map_button_close.addEventListener('click', function(evt){
     evt.preventDefault();
     map.classList.add('hidden');
     map.classList.remove('animation');
@@ -29,28 +29,28 @@ if (document.querySelector('.modal')) {
   const user_name = writeus.querySelector("[name='user-name']");
   const user_email = writeus.querySelector("[name='user-email']");
 
-  writeus_button_open.addEventListener("click", function(evt){
+  writeus_button_open.addEventListener('click', function(evt){
     evt.preventDefault();
     writeus.classList.remove('hidden');
     writeus.classList.add('animation');
     user_name.focus();
   });
 
-  writeus_button_close.addEventListener("click", function(evt){
+  writeus_button_close.addEventListener('click', function(evt){
     writeus.classList.add('hidden');
     writeus.classList.remove('animation');
-    writeus.classList.remove("animation-error");
+    writeus.classList.remove('animation-error');
   });
 
-  writeus.addEventListener("submit", function(evt) {
+  writeus.addEventListener('submit', function(evt) {
     if (!user_name.value || !user_email.value) {
       evt.preventDefault();
-      writeus.classList.add("animation-error");
+      writeus.classList.add('animation-error');
     }
     else {
       evt.preventDefault();
-      writeus.classList.remove("animation-error");
-      writeus.classList.add("hidden");
+      writeus.classList.remove('animation-error');
+      writeus.classList.add('hidden');
     }
   })
 }
@@ -65,14 +65,15 @@ const create_order = document.querySelector("[name='create-order']");
 
 
 for (var i = 0; i < added_buttons_open.length; i++) {
-  added_buttons_open[i].addEventListener('click', function () {
+  added_buttons_open[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
       added.classList.remove('hidden');
       added.classList.add('animation');
       create_order.focus();
   });
 };
 
-added_button_close.addEventListener("click", function(evt){
+added_button_close.addEventListener('click', function(evt){
   evt.preventDefault();
   added.classList.add('hidden');
   added.classList.remove('animation');
@@ -81,22 +82,22 @@ added_button_close.addEventListener("click", function(evt){
 
 
 // Escape
-window.addEventListener("keydown", function(evt){
+window.addEventListener('keydown', function(evt){
   if (evt.keyCode === 27){
-    if (!map.classList.contains("hidden")){
+    if (!map.classList.contains('hidden')){
       evt.preventDefault();
-      map.classList.add("hidden");
+      map.classList.add('hidden');
       map.classList.remove('animation');
     }
-    else if (!writeus.classList.contains("hidden")){
+    else if (!writeus.classList.contains('hidden')){
       evt.preventDefault();
-      writeus.classList.add("hidden");
+      writeus.classList.add('hidden');
       writeus.classList.remove('animation');
-      writeus.classList.remove("animation-error");
+      writeus.classList.remove('animation-error');
     }
-    else if (!added.classList.contains("hidden")){
+    else if (!added.classList.contains('hidden')){
       evt.preventDefault();
-      added.classList.add("hidden");
+      added.classList.add('hidden');
       added.classList.remove('animation');
     }
   }
@@ -138,7 +139,6 @@ if (document.querySelector('.slider')) {
           slides[j].classList.toggle('hidden');
           radio_buttons[j].toggleAttribute('checked');
           radio_icons[j].classList.toggle('checked-radio');
-          console.log("ok")
         }
       });
     }
@@ -156,16 +156,28 @@ if (document.querySelector('.services')) {
       services_pages[0].classList.remove('hidden')
       services_pages[1].classList.add('hidden')
       services_pages[2].classList.add('hidden')
+
+      services_buttons[0].classList.add('selected')
+      services_buttons[1].classList.remove('selected')
+      services_buttons[2].classList.remove('selected')
     });
     services_buttons[1].addEventListener('click', function() {
       services_pages[0].classList.add('hidden')
       services_pages[1].classList.remove('hidden')
       services_pages[2].classList.add('hidden')
+
+      services_buttons[0].classList.remove('selected')
+      services_buttons[1].classList.add('selected')
+      services_buttons[2].classList.remove('selected')
     });
     services_buttons[2].addEventListener('click', function() {
       services_pages[0].classList.add('hidden')
       services_pages[1].classList.add('hidden')
       services_pages[2].classList.remove('hidden')
+
+      services_buttons[0].classList.remove('selected')
+      services_buttons[1].classList.remove('selected')
+      services_buttons[2].classList.add('selected')
     });
   };
 };
