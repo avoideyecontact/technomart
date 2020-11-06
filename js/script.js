@@ -109,6 +109,7 @@ if (document.querySelector('.slider')) {
     let slides = document.querySelectorAll('.slider-item');
 
     let radio_buttons = document.querySelectorAll('.slider-radio-input')
+    let radio_icons = document.querySelectorAll('.slider-radio-icon')
 
     let arrows = document.querySelectorAll('.slider-arrow');
 
@@ -119,6 +120,7 @@ if (document.querySelector('.slider')) {
     for (var i = 0; i < slides.length; i++) {
       slides[i].classList.toggle('hidden');
       radio_buttons[i].toggleAttribute('checked');
+      radio_icons[i].classList.toggle('checked-radio');
     };
     });
 
@@ -126,7 +128,44 @@ if (document.querySelector('.slider')) {
     for (var i = 0; i < slides.length; i++) {
       slides[i].classList.toggle('hidden');
       radio_buttons[i].toggleAttribute('checked');
+      radio_icons[i].classList.toggle('checked-radio');
     };
     });
 
-}
+    for (var i = 0; i < radio_buttons.length; i++) {
+      radio_icons[i].addEventListener('click', function () {
+        for (var j = 0; j < radio_buttons.length; j++) {
+          slides[j].classList.toggle('hidden');
+          radio_buttons[j].toggleAttribute('checked');
+          radio_icons[j].classList.toggle('checked-radio');
+          console.log("ok")
+        }
+      });
+    }
+  }
+
+
+
+//Services
+if (document.querySelector('.services')) {
+  const services_buttons = document.querySelectorAll('.services-button')
+  const services_pages = document.querySelectorAll('.services-button-selected')
+
+  for (var i = 0; i < services_buttons.length; i++) {
+    services_buttons[0].addEventListener('click', function() {
+      services_pages[0].classList.remove('hidden')
+      services_pages[1].classList.add('hidden')
+      services_pages[2].classList.add('hidden')
+    });
+    services_buttons[1].addEventListener('click', function() {
+      services_pages[0].classList.add('hidden')
+      services_pages[1].classList.remove('hidden')
+      services_pages[2].classList.add('hidden')
+    });
+    services_buttons[2].addEventListener('click', function() {
+      services_pages[0].classList.add('hidden')
+      services_pages[1].classList.add('hidden')
+      services_pages[2].classList.remove('hidden')
+    });
+  };
+};
