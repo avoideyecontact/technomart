@@ -1,70 +1,76 @@
 //Map
-const map = document.querySelector('.map-popup');
-const map_button_open = document.querySelector('.contacts-map');
-const map_button_close = document.querySelector('.map-popup-close');
+if (document.querySelector('.map-popup')) {
+  const map = document.querySelector('.map-popup');
+  const map_button_open = document.querySelector('.contacts-map');
+  const map_button_close = document.querySelector('.map-popup-close');
 
-map_button_open.addEventListener("click", function(evt){
-  evt.preventDefault();
-  map.classList.remove('hidden');
-  map.classList.add('animation');
-});
-
-map_button_close.addEventListener("click", function(evt){
-  evt.preventDefault();
-  map.classList.add('hidden');
-  map.classList.remove('animation');
-});
-
-
-
-//Write-us-form
-const writeus = document.querySelector('.modal');
-const writeus_button_open = document.querySelector('.contacts-button');
-const writeus_button_close = document.querySelector('.modal-close');
-const send_button = writeus.querySelector('.modal-send-button');
-
-const user_name = writeus.querySelector("[name='user-name']");
-const user_email = writeus.querySelector("[name='user-email']");
-
-writeus_button_open.addEventListener("click", function(evt){
-  evt.preventDefault();
-  writeus.classList.remove('hidden');
-  writeus.classList.add('animation');
-  user_name.focus();
-});
-
-writeus_button_close.addEventListener("click", function(evt){
-  writeus.classList.add('hidden');
-  writeus.classList.remove('animation');
-  writeus.classList.remove("animation-error");
-});
-
-writeus.addEventListener("submit", function(evt) {
-  if (!user_name.value || !user_email.value) {
+  map_button_open.addEventListener("click", function(evt){
     evt.preventDefault();
-    writeus.classList.add("animation-error");
-  }
-  else {
+    map.classList.remove('hidden');
+    map.classList.add('animation');
+  });
+
+  map_button_close.addEventListener("click", function(evt){
     evt.preventDefault();
+    map.classList.add('hidden');
+    map.classList.remove('animation');
+  });
+}
+
+
+
+//Write us form
+if (document.querySelector('.modal')) {
+  const writeus = document.querySelector('.modal');
+  const writeus_button_open = document.querySelector('.contacts-button');
+  const writeus_button_close = document.querySelector('.modal-close');
+  const send_button = writeus.querySelector('.modal-send-button');
+
+  const user_name = writeus.querySelector("[name='user-name']");
+  const user_email = writeus.querySelector("[name='user-email']");
+
+  writeus_button_open.addEventListener("click", function(evt){
+    evt.preventDefault();
+    writeus.classList.remove('hidden');
+    writeus.classList.add('animation');
+    user_name.focus();
+  });
+
+  writeus_button_close.addEventListener("click", function(evt){
+    writeus.classList.add('hidden');
+    writeus.classList.remove('animation');
     writeus.classList.remove("animation-error");
-    writeus.classList.add("hidden");
-  }
-})
+  });
+
+  writeus.addEventListener("submit", function(evt) {
+    if (!user_name.value || !user_email.value) {
+      evt.preventDefault();
+      writeus.classList.add("animation-error");
+    }
+    else {
+      evt.preventDefault();
+      writeus.classList.remove("animation-error");
+      writeus.classList.add("hidden");
+    }
+  })
+}
 
 
 
 //Catalog-modal
 const added = document.querySelector('.modal-added');
-const added_button_open = document.querySelector('.add');
+const added_buttons_open = document.querySelectorAll('.buy');
 const added_button_close = document.querySelector('.modal-added-close');
-const create_order = writeus.querySelector("[name='create-order']");
+const create_order = document.querySelector("[name='create-order']");
 
-added_button_open.addEventListener("click", function(evt){
-  evt.preventDefault();
-  added.classList.remove('hidden');
-  added.classList.add('animation');
-  create_order.focus();
-});
+
+for (var i = 0; i < added_buttons_open.length; i++) {
+  added_buttons_open[i].addEventListener('click', function () {
+      added.classList.remove('hidden');
+      added.classList.add('animation');
+      create_order.focus();
+  });
+};
 
 added_button_close.addEventListener("click", function(evt){
   evt.preventDefault();
@@ -96,26 +102,31 @@ window.addEventListener("keydown", function(evt){
   }
 });
 
+
+
 //Slider
-let first_slide = document.querySelector('.slide-1');
-let second_slide = document.querySelector('.slide-2');
+if (document.querySelector('.slider')) {
+    let slides = document.querySelectorAll('.slider-item');
 
-let first_radio = document.querySelector('.slider-radio-first')
-let second_radio = document.querySelector('.slider-radio-second')
+    let radio_buttons = document.querySelectorAll('.slider-radio-input')
 
-let arrow_prew = document.querySelector('.slider-arrow-left');
-let arrow_next = document.querySelector('.slider-arrow-right');
+    let arrows = document.querySelectorAll('.slider-arrow');
 
-arrow_prew.onclick = function() {
-  first_slide.classList.toggle('hidden');
-  second_slide.classList.toggle('hidden');
-  first_radio.toggleAttribute('checked');
-  second_radio.toggleAttribute('checked');
-};
+    arrow_prew = arrows[0];
+    arrow_next = arrows[1];
 
-arrow_next.onclick = function() {
-  first_slide.classList.toggle('hidden');
-  second_slide.classList.toggle('hidden');
-  first_radio.toggleAttribute('checked');
-  second_radio.toggleAttribute('checked');
-};
+    arrow_prew.addEventListener('click', function(){
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.toggle('hidden');
+      radio_buttons[i].toggleAttribute('checked');
+    };
+    });
+
+    arrow_next.addEventListener('click', function(){
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.toggle('hidden');
+      radio_buttons[i].toggleAttribute('checked');
+    };
+    });
+
+}
