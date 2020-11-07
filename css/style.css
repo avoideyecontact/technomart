@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 
 /*   Variables   */
 
@@ -1543,9 +1536,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .profile-section{
   width: 299px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: var(--white);
   padding: ;
 }
@@ -1790,6 +1790,22 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: var(--special-beige-dull);
   font-family: inherit;
   font-size: inherit;
+}
+
+.price-controls input::-webkit-input-placeholder {
+  color: #283136;
+}
+
+.price-controls input::-moz-placeholder {
+  color: #283136;
+}
+
+.price-controls input:-ms-input-placeholder {
+  color: #283136;
+}
+
+.price-controls input::-ms-input-placeholder {
+  color: #283136;
 }
 
 .price-controls input::placeholder {
@@ -2260,7 +2276,8 @@ input[type="search"]::-webkit-search-results-decoration {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 10px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .site-nav{
@@ -3006,30 +3023,50 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /*  Animation  */
 
+@-webkit-keyframes bounce {
+  0%   {-webkit-transform: translateY(-1500px);transform: translateY(-1500px); }
+  70%  {-webkit-transform: translateY(30px);transform: translateY(30px);    }
+  90%  {-webkit-transform: translateY(-10px);transform: translateY(-10px);   }
+  100% {-webkit-transform: translateY(0);transform: translateY(0);       }
+}
+
 @keyframes bounce {
-  0%   {transform: translateY(-1500px); }
-  70%  {transform: translateY(30px);    }
-  90%  {transform: translateY(-10px);   }
-  100% {transform: translateY(0);       }
+  0%   {-webkit-transform: translateY(-1500px);transform: translateY(-1500px); }
+  70%  {-webkit-transform: translateY(30px);transform: translateY(30px);    }
+  90%  {-webkit-transform: translateY(-10px);transform: translateY(-10px);   }
+  100% {-webkit-transform: translateY(0);transform: translateY(0);       }
 }
 
 .animation{
   display: block;
-  animation-name: bounce;
-  animation-duration: 0.5s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes shaking {
+  0%   {-webkit-transform: translateX(0px);transform: translateX(0px);  }
+  20%  {-webkit-transform: translateX(30px);transform: translateX(30px); }
+  40%  {-webkit-transform: translateX(-30px);transform: translateX(-30px);}
+  60%  {-webkit-transform: translateX(30px);transform: translateX(30px); }
+  80%  {-webkit-transform: translateX(-30px);transform: translateX(-30px);}
+  100% {-webkit-transform: translateX(0);transform: translateX(0);    }
 }
 
 @keyframes shaking {
-  0%   {transform: translateX(0px);  }
-  20%  {transform: translateX(30px); }
-  40%  {transform: translateX(-30px);}
-  60%  {transform: translateX(30px); }
-  80%  {transform: translateX(-30px);}
-  100% {transform: translateX(0);    }
+  0%   {-webkit-transform: translateX(0px);transform: translateX(0px);  }
+  20%  {-webkit-transform: translateX(30px);transform: translateX(30px); }
+  40%  {-webkit-transform: translateX(-30px);transform: translateX(-30px);}
+  60%  {-webkit-transform: translateX(30px);transform: translateX(30px); }
+  80%  {-webkit-transform: translateX(-30px);transform: translateX(-30px);}
+  100% {-webkit-transform: translateX(0);transform: translateX(0);    }
 }
 
 .animation-error{
   display: block;
-  animation-name: shaking;
-  animation-duration: 0.5s;
+  -webkit-animation-name: shaking;
+          animation-name: shaking;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
