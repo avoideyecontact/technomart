@@ -26,8 +26,8 @@ if (document.querySelector('.modal')) {
   const writeus_button_close = document.querySelector('.modal-close');
   const send_button = writeus.querySelector('.modal-send-button');
 
-  const user_name = writeus.querySelector("[name='user-name']");
-  const user_email = writeus.querySelector("[name='user-email']");
+  const user_name = writeus.querySelector('[name="user-name"]');
+  const user_email = writeus.querySelector('[name="user-email"]');
 
   writeus_button_open.addEventListener('click', function(evt){
     evt.preventDefault();
@@ -61,7 +61,7 @@ if (document.querySelector('.modal')) {
 const added = document.querySelector('.modal-added');
 const added_buttons_open = document.querySelectorAll('.buy');
 const added_button_close = document.querySelector('.modal-added-close');
-const create_order = document.querySelector("[name='create-order']");
+const create_order = document.querySelector('[name="create-order"]');
 
 
 for (var i = 0; i < added_buttons_open.length; i++) {
