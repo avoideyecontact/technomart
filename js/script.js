@@ -43,7 +43,7 @@ if (document.querySelector('.modal')) {
   });
 
   writeus.addEventListener('submit', function(evt) {
-    if (!user_name.value || !user_email.value) {
+    if (user_name.value == '' || user_email.value == '') {
       evt.preventDefault();
       writeus.classList.add('animation-error');
     }
