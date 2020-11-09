@@ -48,7 +48,6 @@ if (document.querySelector('.modal')) {
       writeus.classList.add('animation-error');
     }
     else {
-      evt.preventDefault();
       writeus.classList.remove('animation-error');
       writeus.classList.add('hidden');
     }

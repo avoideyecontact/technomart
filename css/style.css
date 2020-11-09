@@ -2731,6 +2731,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .modal-input-text {
+  display: block;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
